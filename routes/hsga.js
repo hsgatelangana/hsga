@@ -4,7 +4,7 @@ const multer  = require('multer');
 const {storage}=require("../cloudConfig.js");
 const upload=multer({storage});
 
-router.route("/hsga")
+router.route("/")
     .get((req,res)=>{
     res.render("hsga/index.ejs");
 })
