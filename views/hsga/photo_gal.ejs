@@ -1,0 +1,106 @@
+<style>
+    .img-gallery{
+        width: 80%;
+        margin: 100px auto 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+        grid-gap:30px
+    }
+    .actim{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+    .actim:hover{
+        transform: scale(0.8) translate3d(0px, 0px, -250px) rotate(-15deg);
+        border-radius:10% 50% 10% 50%;
+        box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.8);
+        z-index: 4;
+    }
+    .full-img{
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 5000;
+    }
+    .full-img img{
+        width: 90%;
+        height: 95%;
+        max-height: 400px;
+        max-width: 800px;
+    }
+    .full-img span{
+        position: absolute;
+        top: 5%;
+        right: 2%;
+        cursor: pointer;
+    }
+</style>
+
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="border-radius-none history-card card m-0 p-0">
+  <img src="https://images.unsplash.com/photo-1505226755626-21044548b8aa?q=80&w=1874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="history-image col-lg-12 p-0 m-0">
+  <div class="card-img-overlay d-flex align-items-center ms-5 ps-4">
+    <h1 class="card-title history-card-text">Activities and Memories</h1>      
+  </div>
+</div>
+<br>
+<div style="width: 100vw;">
+    <div class="full-img" id="fullimgbox">
+        <img src="/images/activities/1.jpg" alt="" id="fullimg">
+        <span onclick="closeFullImg()"><i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i></span>
+    </div>
+    <div class="img-gallery">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516917/a_sp9mhe.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516917/b_og8pcm.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516918/c_bd5giu.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516918/d_vuur8l.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516918/e_bl14v8.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516921/f_lu58uo.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516922/g_p6d38b.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516922/h_aadvu8.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516922/i_mdzjev.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516923/j_dm0qc0.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516924/k_zf6kqi.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516925/l_fvzm9c.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516925/m_qoqk8g.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516926/n_wg256c.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516926/o_efltwm.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516927/p_ngiwmz.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516928/q_ly7xyj.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516928/r_dxnvqb.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516929/s_wfu3xi.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516929/t_x9z3hj.jpg" alt="" class="actim">
+        <img src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516930/u_vuqxbg.jpg" alt="" class="actim">
+
+    </div>
+</div>
+
+<script>
+    let fullimgbox=document.getElementById("fullimgbox");
+    let fullimg=document.getElementById("fullimg")
+
+    function openFullImg(pic){
+        fullimgbox.style.display="flex";
+        fullimg.src=pic;
+    }
+
+    function closeFullImg(){
+        fullimgbox.style.display="none";
+    }
+
+    let img=document.querySelectorAll(".actim");
+    img.forEach(ele=>{
+        let src=ele.src;
+        console.log(src);
+        ele.addEventListener("click",()=>{
+            openFullImg(src)});
+    })
+</script>

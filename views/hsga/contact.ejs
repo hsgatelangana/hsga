@@ -1,0 +1,138 @@
+<style>
+    h5,h2{
+        font-family: poppins;
+        font-weight: 600;
+        text-align: center;
+    }
+    b{
+        font-family: poppins;
+    }
+    input,textarea{
+        border-radius: 0 !important;
+        border: 1px solid black !important;
+    }
+    @media screen and (max-width : 767.9px) {
+        .left-div{
+            width: 90% !important;
+            margin-bottom: 15%;
+        }
+        .right-div{
+            width: 90% !important;
+        }
+    }
+</style>
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="border-radius-none history-card card m-0 p-0">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7oU9UjHwOu86zWIqbRc301GUaC96eY1-Ntw&s" class="history-image col-lg-12 p-0 m-0">
+    <div class="card-img-overlay d-flex align-items-center ms-5 ps-4">
+      <h1 class="card-title history-card-text">Contact Us</h1>      
+    </div>
+  </div>
+  <br>
+  <div  class="mt-5">
+    <h2>Contact With Us</h2>
+  </div>
+  <br>
+  <div style="width: 100vw;display: flex;justify-content: space-around;flex-wrap: wrap;">
+    <div style="width: 30%; border: 1px solid black;" class="left-div">
+        <div class="pe-lg-4 ps-lg-4 pt-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between;">
+            <div>
+                <div><h5>Phone</h5>0931450055</div>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone fa-xl" style="color: #019241;"></i>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div><h5>National Head Quarters</h5></div>
+            <hr>
+            <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between;">
+                <div>
+                        <b>Office Address : </b> <br>
+                        E-18/19, <br>
+                        RD Floor, Gali No.9,<br>
+                        Hanuman Chowk, 51, <br>
+                        Wazirabad,<br>
+                        New Delhi-110084
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot fa-xl" style="color: #01a52e;"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between;">
+            <div>hsgasb@gmail.com </div>
+            <div><i class="fa-solid fa-envelope fa-xl" style="color: #01a52e;"></i></div>
+        </div>
+        <hr>
+        <div>
+            <div><h5>State Head Quarters</h5></div>
+            <hr>
+            <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between;">
+                <div>
+                    <b>Office Address : </b> <br>
+                    #B-3 F-1, <br>
+                    Vigyan Puri Colony, Vidhya Nagar,
+                    <br> Hyderabad,
+                    <br> Telangana-500044
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot fa-xl" style="color: #01a52e;"></i>
+                </div>
+            </div>
+            
+            
+        </div>
+        <hr>
+        <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between;">
+            <div>040-31607502,<br>
+                 7997819797
+            </div>
+            <div><i class="fa-solid fa-phone fa-xl" style="color: #01a52e;"></i></div>
+        </div>
+        <hr>
+        <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div>hsgatelangana@gmail.com</div>
+            <div><i class="fa-solid fa-envelope fa-xl" style="color: #01a52e;"></i></div>
+        </div>
+        <hr>
+        <div>
+            <div class="pe-lg-4 ps-lg-4 pe-md-2 ps-md-2">
+                <h4>Follow Us</h4>
+            </div>
+            <div class="ps-lg-4 pe-lg-4 pb-4 pe-md-2 ps-md-2">
+                <i class="fa-brands fa-facebook fa-xl" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-brands fa-square-x-twitter fa-xl" style="color: #01a52e;"></i>
+            </div>
+        </div>
+    </div>
+    <div style="width: 60%;" class="right-div">
+        <form action="#">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input type="text" placeholder="Name" class="form-control form-control">
+                </div>
+                <br><br>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input type="text" placeholder="Your Phone Number" class="form-control">
+                </div>
+            </div>
+            <br>
+            <div>
+                <input type="email" placeholder="Email" class="form-control">
+            </div>
+            <br>
+            <div>
+                <textarea name="" id="" placeholder="Message" class="form-control" rows="8"></textarea>
+            </div>
+            <br>
+            <div class="col-6">
+                <input type="text" placeholder="Security Code" class="form-control">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-dark moa" style="background-color: #f5873b; border: none; border-radius: 0;">SEND MESSAGE</button>
+        </form>
+    </div>
+  </div>
